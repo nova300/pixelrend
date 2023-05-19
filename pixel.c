@@ -139,6 +139,34 @@ void drawSineWave(float colorArray[], int width, int height, int amplitude, floa
             colorArray[pixelIndex + 3] = 1.0; // Alpha component
         }
     }
+    for (x = 0; x < width; x++) {
+        y = (int)round(amplitude * sin(frequency * x * increment + of + 0.5));
+        y += midPoint;
+
+        if (y >= 0 && y < height) {
+            int pixelIndex = (y * width + x) * 4; // Assuming RGBA format
+
+            // Set the color values for the pixel
+            colorArray[pixelIndex] = 0.0;     // Red component
+            colorArray[pixelIndex + 1] = 1.0; // Green component
+            colorArray[pixelIndex + 2] = 0.0; // Blue component
+            colorArray[pixelIndex + 3] = 1.0; // Alpha component
+        }
+    }
+    for (x = 0; x < width; x++) {
+        y = (int)round(amplitude * sin(frequency * x * increment + of + 1.0));
+        y += midPoint;
+
+        if (y >= 0 && y < height) {
+            int pixelIndex = (y * width + x) * 4; // Assuming RGBA format
+
+            // Set the color values for the pixel
+            colorArray[pixelIndex] = 0.0;     // Red component
+            colorArray[pixelIndex + 1] = 0.0; // Green component
+            colorArray[pixelIndex + 2] = 1.0; // Blue component
+            colorArray[pixelIndex + 3] = 1.0; // Alpha component
+        }
+    }
 }
 
 void clearFramebuffer()
