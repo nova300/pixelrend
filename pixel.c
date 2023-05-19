@@ -4,8 +4,8 @@
 #include <GL/glew.h>
 #include <math.h>
 
-#define WIDTH 640
-#define HEIGHT 480
+#define WIDTH 320
+#define HEIGHT 200
 
 SDL_Window* window;
 SDL_GLContext context;
@@ -219,8 +219,8 @@ int main()
     setupBuffers();
     setupTexture();
 
-    offset2 = 100;
-    offset = 10;
+    offset2 = 30;
+    offset = 30;
 
     float t = 0.0f;
     while (1)
